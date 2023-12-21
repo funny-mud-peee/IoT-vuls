@@ -4,7 +4,7 @@
 
 D-Link DIR-822+ V1.0.2 was found to contain a command injection in `SetStaticRouteSettings` function.  allows remote attackers to execute arbitrary commands via shell
 
-![image-20231221212125407](D:\typora 图片\image-20231221212125407.png)
+![image-20231221212125407](https://github.com/funny-mud-peee/IoT-vuls/blob/main/dir822%2B/1/img/image-20231221212129179.png)
 
 ![image-20231221212129179](D:\typora 图片\image-20231221212129179.png)
 
