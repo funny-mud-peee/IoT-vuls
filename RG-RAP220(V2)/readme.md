@@ -2,7 +2,7 @@
 
 ## Overview
 
-![image-20231222163155940](D:\typora 图片\image-20231222163155940.png)
+![image-20231222163155940](https://github.com/funny-mud-peee/IoT-vuls/blob/main/RG-RAP220(V2)/img/image-20231222163155940.png)
 
 ## Vulnerability details
 
@@ -12,11 +12,11 @@
 
 ls
 
-![image-20231222164924298](D:\typora 图片\image-20231222164924298.png)
+![image-20231222164924298](https://github.com/funny-mud-peee/IoT-vuls/blob/main/RG-RAP220(V2)/img/image-20231222164924298.png)
 
 cat /etc/passwd
 
-![image-20231222163247926](D:\typora 图片\image-20231222163247926.png)
+![image-20231222163247926](https://github.com/funny-mud-peee/IoT-vuls/blob/main/RG-RAP220(V2)/img/image-20231222163247926.png)
 
 ## EXP
 
