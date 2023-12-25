@@ -2,7 +2,7 @@
 
 ## Overview
 
-D-Link DIR-822+ V1.0.2 was found to contain a command injection in `SetStaticRouteSettings` function.  allows remote attackers to execute arbitrary commands via shell
+D-Link DIR-822+ V1.0.2 was found login bypass in HNAP1 interface.Allow attackers to log in to administrator accounts with empty passwords
 
 ![image-20231222123220855](https://github.com/funny-mud-peee/IoT-vuls/blob/main/dir822%2B/2/img/image-20231221212125407.png)
 
