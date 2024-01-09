@@ -7,7 +7,7 @@ Firmware Version: V17.0.0cu.557_B20221024
 Manufacturer's website information：https://www.totolink.net/
 Firmware download address ：https://www.totolink.net/home/menu/detail/menu_listtpl/download/id/241/ids/36.html
 
-![image-20240109124617070](D:\typora 图片\image-20240109124617070.png)
+![image-20240109124617070](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/3/img/image-20240109124617070.png)
 
 ## Vulnerability Description
 
@@ -34,7 +34,7 @@ Connection: close
 
 injection the command "ls>/web/345.txt"
 
-![image-20240109131637580](D:\typora 图片\image-20240109131637580.png)
+![image-20240109131637580](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/3/img/image-20240109131637580.png)
 
 check the result.
 
@@ -50,18 +50,18 @@ Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
 Connection: close
 ```
 
-![image-20240109131644895](D:\typora 图片\image-20240109131644895.png)
+![image-20240109131644895](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/3/img/image-20240109131644895.png)
 
 ## Analysis
 
 sub_414614 will handle the `setScheduleCfg` request. sub_414614 get `minute` parameter from request body, then pass to `Uci_Set_Str` function.
 
-![image-20240109131808344](D:\typora 图片\image-20240109131808344.png)
+![image-20240109131808344](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/3/img/image-20240109131808344.png)
 
 `Uci_Set_Str` function Splicing uci command, and pass to `CsteSystem` function.
 
-![image-20240109131204077](D:\typora 图片\image-20240109131204077.png)
+![image-20240109131204077](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/3/img/image-20240109131204077.png)
 
 `CsteSystem` wraps the command and then passes it to `execv` to execute the command.
 
-![image-20240109131330610](D:\typora 图片\image-20240109131330610.png)
+![image-20240109131330610](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/3/img/image-20240109131330610.png)
