@@ -7,7 +7,7 @@ Firmware Version: V17.0.0cu.557_B20221024
 Manufacturer's website information：https://www.totolink.net/
 Firmware download address ：https://www.totolink.net/home/menu/detail/menu_listtpl/download/id/241/ids/36.html
 
-![image-20240109124617070](D:\typora 图片\image-20240109124617070.png)
+![image-20240109124617070](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/1/img/image-20240109124617070.png)
 
 ## Vulnerability Description
 
@@ -34,7 +34,7 @@ Connection: close
 
 injection the command "ls>/web/123.txt"
 
-![image-20240109130008597](D:\typora 图片\image-20240109130008597.png)
+![image-20240109130008597](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/1/img/image-20240109130008597.png)
 
 check the result.
 
@@ -50,10 +50,10 @@ Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
 Connection: close
 ```
 
-![image-20240109130149275](D:\typora 图片\image-20240109130149275.png)
+![image-20240109130149275](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/1/img/image-20240109130149275.png)
 
 ## Analysis
 
 sub_422380 will handle the `setWanCfg` request. sub_422380 get `hostName` parameter from request body, then pass to `doSystem` function.
 
-![image-20240109125531671](D:\typora 图片\image-20240109125531671.png)
+![image-20240109125531671](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/1/img/image-20240109125531671.png)
