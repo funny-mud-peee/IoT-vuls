@@ -56,7 +56,7 @@ Connection: close
 
 ## Analysis
 
-sub_40E920 will handle the `setWanCfg` request. sub_40E920 get `hostName` parameter from request body, then pass to `Uci_Set_Str` function.
+sub_40E920 will handle the `setDdnsCfg` request. sub_40E920 get `username` parameter from request body, then pass to `Uci_Set_Str` function.
 
 ![image-20240109130751395](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/2/img/image-20240109130751395.png)
 
