@@ -1,7 +1,6 @@
 # DIR-822+ Command Injection
 ### Discoverer
-杨益/霍兴鹏
-
+Yangyi/HuoXingpeng
 ## Overview
 
 D-Link DIR-822+ V1.0.2 was found to contain a command injection in `SetStaticRouteSettings` function.  allows remote attackers to execute arbitrary commands via shell
