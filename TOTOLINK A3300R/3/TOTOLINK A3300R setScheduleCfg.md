@@ -1,5 +1,6 @@
 # TOTOlink A3300R V17.0.0cu.557_B20221024 Command Injection
-
+### Discoverer
+Yangyi
 ## Product Information
 
 Device: TOTOlink A3300R
