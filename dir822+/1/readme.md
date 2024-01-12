@@ -1,4 +1,6 @@
 # DIR-822+ Command Injection
+###Discoverer
+杨益/霍兴鹏
 
 ## Overview
 
