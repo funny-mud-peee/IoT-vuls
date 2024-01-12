@@ -1,5 +1,6 @@
 # DIR-822+ Login Bypass
-
+### Discoverer
+杨益
 ## Overview
 
 D-Link DIR-822+ V1.0.2 was found login bypass in HNAP1 interface.Allow attackers to log in to administrator accounts with empty passwords
