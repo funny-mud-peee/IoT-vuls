@@ -7,7 +7,7 @@ Firmware Version: V17.0.0cu.557_B20221024
 Manufacturer's website information：https://www.totolink.net/
 Firmware download address ：https://www.totolink.net/home/menu/detail/menu_listtpl/download/id/241/ids/36.html
 
-![image-20240109124617070](D:\typora 图片\image-20240109124617070.png)
+![image-20240109124617070](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/7/img/image-20240109124617070.png)
 
 ## Vulnerability Description
 
@@ -34,7 +34,7 @@ Connection: close
 
 injection the command "ls>/web/cmdi7.txt"
 
-![image-20240119125319849](D:\typora 图片\image-20240119125319849.png)
+![image-20240119125319849](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/7/img/image-20240119125319849.png)
 
 check the result.
 
@@ -51,14 +51,14 @@ Connection: close
 
 ```
 
-![image-20240119125609275](D:\typora 图片\image-20240119125609275.png)
+![image-20240119125609275](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/7/img/image-20240119125609275.png)
 
 ## Analysis
 
 sub_422380 get `pppoeUser` parameter from request body
 
-![image-20240119131956114](D:\typora 图片\image-20240119131956114.png)
+![image-20240119131956114](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/7/img/image-20240119131956114.png)
 
 then pass to sub_41ECF8 function which handle `setIpv6Cfg` request
 
-![image-20240119132112844](D:\typora 图片\image-20240119132112844.png)
+![image-20240119132112844](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/7/img/image-20240119132112844.png)
