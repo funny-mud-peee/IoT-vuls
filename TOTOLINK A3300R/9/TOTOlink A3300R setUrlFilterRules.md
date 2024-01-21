@@ -7,7 +7,7 @@ Firmware Version: V17.0.0cu.557_B20221024
 Manufacturer's website information：https://www.totolink.net/
 Firmware download address ：https://www.totolink.net/home/menu/detail/menu_listtpl/download/id/241/ids/36.html
 
-![image-20240109124617070](D:\typora 图片\image-20240109124617070.png)
+![image-20240109124617070](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/7/img/image-20240109124617070.png)
 
 ## Vulnerability Description
 
@@ -34,7 +34,7 @@ Connection: close
 
 injection the command "ls>/web/cmdi9.txt"
 
-![image-20240119133213218](D:\typora 图片\image-20240119133213218.png)
+![image-20240119133213218](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/9/img/image-20240119133213218.png)
 
 check the result.
 
@@ -51,7 +51,7 @@ Connection: close
 
 ```
 
-![image-20240119133218122](D:\typora 图片\image-20240119133218122.png)
+![image-20240119133218122](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/9/img/image-20240119133218122.png)
 
 ## Analysis
 
