@@ -34,7 +34,7 @@ Connection: close
 
 injection the command "ls>/web/cmdi10.txt"
 
-![image-20240119135547393](D:\typora 图片\image-20240119135547393.png)
+![image-20240119135547393](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/10/img/image-20240119135547393.png)
 
 check the result.
 
@@ -51,19 +51,19 @@ Connection: close
 
 ```
 
-![image-20240119135553027](D:\typora 图片\image-20240119135553027.png)
+![image-20240119135553027](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/10/img/image-20240119135553027.png)
 
 ## Analysis
 
 sub_41BFB8 will handle the `setPortForwardRules` request. sub_41BFB8 get `enable` parameter from request body, then pass to `Uci_Set_Str` function.
 
-![image-20240119135952091](D:\typora 图片\image-20240119135952091.png)
+![image-20240119135952091](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/10/img/image-20240119135952091.png)
 
 `Uci_Set_Str` function Splicing uci command, and pass to `CsteSystem` function.
 
-![image-20240109131204077](D:\typora 图片\image-20240109131204077.png)
+![image-20240109131204077](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/8/img/image-20240109131204077.png)
 
 `CsteSystem` wraps the command and then passes it to `execv` to execute the command.
 
-![image-20240109131330610](D:\typora 图片\image-20240109131330610.png)
+![image-20240109131330610](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/8/img/image-20240109131330610.png)
 
