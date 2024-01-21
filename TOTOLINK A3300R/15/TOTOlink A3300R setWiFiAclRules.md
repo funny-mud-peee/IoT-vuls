@@ -7,7 +7,7 @@ Firmware Version: V17.0.0cu.557_B20221024
 Manufacturer's website information：https://www.totolink.net/
 Firmware download address ：https://www.totolink.net/home/menu/detail/menu_listtpl/download/id/241/ids/36.html
 
-![image-20240109124617070](D:\typora 图片\image-20240109124617070.png)
+![image-20240109124617070](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/7/img/image-20240109124617070.png)
 
 ## Vulnerability Description
 
@@ -35,7 +35,7 @@ Connection: close
 
 injection the command "ls>/web/cmdi15.txt"
 
-![b0870a83252c01cad4f1774f3961469](D:\typora 图片\b0870a83252c01cad4f1774f3961469.png)
+![b0870a83252c01cad4f1774f3961469](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/15/img/b0870a83252c01cad4f1774f3961469.png)
 
 check the result.
 
@@ -51,19 +51,19 @@ Connection: close
 
 ```
 
-![46f04bf4acc9820a9576fd78c1b6857](D:\typora 图片\46f04bf4acc9820a9576fd78c1b6857.png)
+![46f04bf4acc9820a9576fd78c1b6857](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/15/img/46f04bf4acc9820a9576fd78c1b6857.png)
 
 ## Analysis
 
 sub_4217E0 will handle the `setWiFiAclRules` request. sub_4217E0 get `desc` parameter from request body, then pass to `Uci_Set_Str` function.
 
-![image-20240119144150895](D:\typora 图片\image-20240119144150895.png)
+![image-20240119144150895](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/15/img/image-20240119144150895.png)
 
 `Uci_Set_Str` function Splicing uci command, and pass to `CsteSystem` function.
 
-![image-20240109131204077](D:\typora 图片\image-20240109131204077.png)
+![image-20240109131204077](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/8/img/image-20240109131204077.png)
 
 `CsteSystem` wraps the command and then passes it to `execv` to execute the command.
 
-![image-20240109131330610](D:\typora 图片\image-20240109131330610.png)
+![image-20240109131330610](https://github.com/funny-mud-peee/IoT-vuls/blob/main/TOTOLINK%20A3300R/8/img/image-20240109131330610.png)
 
