@@ -9,8 +9,6 @@ Firmware download address ：https://www.totolink.net/home/menu/detail/menu_list
 
 ![image-20240117214330958](D:\typora 图片\image-20240117214330958.png)
 
-![image-20240131224359100](D:\typora 图片\image-20240131224359100.png)
-
 ## POC
 
 ```url
