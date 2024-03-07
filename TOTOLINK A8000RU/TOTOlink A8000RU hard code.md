@@ -1,6 +1,5 @@
 # TOTOlink A8000RU V7.1cu.643_B20200521 Hard Code Password for root
-### Discover
-Yangyi
+
 ## Product Information
 
 Device: TOTOlink A8000R
