@@ -13,7 +13,7 @@
 * Firmware download: https://www.downloads.netgear.com/files/GDC/CBK40/CBR40-V2.5.0.28.zip
 ```
 
-![image-20240306104512980]([D:\typora 图片\image-20240306104512980.png](https://github.com/funny-mud-peee/IoT-vuls/blob/main/Netgear%20CBR40%5CCBK40%5CCBK43/img/image-20240306104512980.png))
+![image-20240306104512980](https://github.com/funny-mud-peee/IoT-vuls/blob/main/Netgear%20CBR40%5CCBK40%5CCBK43/img/image-20240306104512980.png)
 
 ## Description
 
