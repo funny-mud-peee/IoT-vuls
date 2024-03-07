@@ -1,6 +1,4 @@
 # RG-FAP220 RCE
-### Discoverer
-Yangyi
 ## Overview
 
 ![image-20231222163155940](https://github.com/funny-mud-peee/IoT-vuls/blob/main/RG-RAP220(V2)/img/image-20231222163155940.png)
