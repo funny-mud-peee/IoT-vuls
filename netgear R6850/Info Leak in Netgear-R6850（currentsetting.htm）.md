@@ -1,6 +1,6 @@
 # Info Leak in Netgear-R6850（currentsetting.htm）
 
-![image-20240319114724503](D:\typora 图片\image-20240319114724503.png)
+![image-20240319114724503](https://github.com/funny-mud-peee/IoT-vuls/blob/main/netgear%20R6850/img/image-20240319114724503.png)
 
 ## Overview
 
@@ -13,7 +13,7 @@
 * Firmware download:https://www.downloads.netgear.com/files/GDC/R6850/R6850_V1.1.0.88.zip
 ```
 
-![image-20240319114208267](D:\typora 图片\image-20240319114208267.png)
+![image-20240319114208267](https://github.com/funny-mud-peee/IoT-vuls/blob/main/netgear%20R6850/img/image-20240319114208267.png)
 
 ## Description
 
