@@ -1,6 +1,6 @@
 # Netgear-R6850 V1.1.0.88 Command Injection(ntp_server)
 
-![image-20240319114656029](D:\typora 图片\image-20240319114656029.png)
+![image-20240319114656029](https://github.com/funny-mud-peee/IoT-vuls/blob/main/netgear%20R6850/img/image-20240319114656029.png)
 
 ## Overview
 
@@ -20,15 +20,15 @@ When deal with  `ntp_setting` request,`ntpserver` parameter is vulnerable to OS 
 
 The effect of executing the "touch home/cmdi1.txt" command
 
-![image-20240319145515451](D:\typora 图片\image-20240319145515451.png)
+![image-20240319145515451](https://github.com/funny-mud-peee/IoT-vuls/blob/main/netgear%20R6850/img/image-20240319145515451.png)
 
 Due to filtering issues, base64 ciphertext injection is used
 
-![image-20240319145649975](D:\typora 图片\image-20240319145649975.png)
+![image-20240319145649975](https://github.com/funny-mud-peee/IoT-vuls/blob/main/netgear%20R6850/img/image-20240319145649975.png)
 
 If encryption is not performed, a filtering rule will be triggered, resulting in 403 Forbidden instead
 
-![image-20240319145749059](D:\typora 图片\image-20240319145749059.png)
+![image-20240319145749059](https://github.com/funny-mud-peee/IoT-vuls/blob/main/netgear%20R6850/img/image-20240319145749059.png)
 
 ```http
 POST /setup.cgi?id=d7dd745acc849118 HTTP/1.1
@@ -54,28 +54,28 @@ use_ntpserver=other&ntp_server=%26dG91Y2ggaG9tZS9jb21kaTEudHh0%26&time_zone=%2B8
 
 In the main function of `setup. cgi`, all requests with `setup. cgi` in the URL will be processed by the setup_main function
 
-![image-20240319134651718](D:\typora 图片\image-20240319134651718.png)
+![image-20240319134651718](https://github.com/funny-mud-peee/IoT-vuls/blob/main/netgear%20R6850/img/image-20240319134651718.png)
 
 It should be noted that a filter (`FindForbidValue`) was applied at the beginning of the function, filtering out some characters and specific functions. Here, we need to bypass the filtering rules and use base64 encryption for command injection
 
-![image-20240319134758233](D:\typora 图片\image-20240319134758233.png)
+![image-20240319134758233](https://github.com/funny-mud-peee/IoT-vuls/blob/main/netgear%20R6850/img/image-20240319134758233.png)
 
 Through packet capture, it can be seen that todo=save, this_file=FW_ntp.htm, so analyze the save function.
 
 In line 816, it can be seen that when this file=FW_ntp.htm, it will go to COMMAND (v54), thus calling `rc` to execute `ntp restart`
 
-![image-20240319151038361](D:\typora 图片\image-20240319151038361.png)
+![image-20240319151038361](https://github.com/funny-mud-peee/IoT-vuls/blob/main/netgear%20R6850/img/image-20240319151038361.png)
 
-![image-20240319151131819](D:\typora 图片\image-20240319151131819.png)
+![image-20240319151131819](https://github.com/funny-mud-peee/IoT-vuls/blob/main/netgear%20R6850/img/image-20240319151131819.png)
 
 In the `sub_68EFC` function, the value of `ntp_sever` will be set, which can be controlled by the user by modifying the post package body
 
-![image-20240319150321010](D:\typora 图片\image-20240319150321010.png)
+![image-20240319150321010](https://github.com/funny-mud-peee/IoT-vuls/blob/main/netgear%20R6850/img/image-20240319150321010.png)
 
 `rc `will call `rc_apps` and find the sub_44DAE8 function in `rc_apps`, which executes `ntp restart`
 
-![image-20240319151445874](D:\typora 图片\image-20240319151445874.png)
+![image-20240319151445874](https://github.com/funny-mud-peee/IoT-vuls/blob/main/netgear%20R6850/img/image-20240319151445874.png)
 
 In `ntp restart`, `start_ntp` will be called, which will cause the `ntp_server` parameter command to execute
 
-![image-20240319151625444](D:\typora 图片\image-20240319151625444.png)
+![image-20240319151625444](https://github.com/funny-mud-peee/IoT-vuls/blob/main/netgear%20R6850/img/image-20240319151625444.png)
