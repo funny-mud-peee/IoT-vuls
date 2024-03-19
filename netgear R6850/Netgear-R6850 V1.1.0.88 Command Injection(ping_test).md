@@ -1,6 +1,6 @@
 # Netgear-R6850 V1.1.0.88 Command Injection(ping_test)
 
-![image-20240319114656029](D:\typora 图片\image-20240319114656029.png)
+![image-20240319114656029](https://github.com/funny-mud-peee/IoT-vuls/blob/main/netgear%20R6850/img/image-20240319114656029.png)
 
 ## Overview
 
@@ -20,7 +20,7 @@ When deal with  `ping_test` request,`c4_IPAddr` parameter is vulnerable to OS co
 
 The effect of executing the "ls" command
 
-![image-20240319133131323](D:\typora 图片\image-20240319133131323.png)
+![image-20240319133131323](https://github.com/funny-mud-peee/IoT-vuls/blob/main/netgear%20R6850/img/image-20240319133131323.png)
 
 ```python
 import requests
@@ -89,18 +89,18 @@ main()
 
 In the main function of `setup. cgi`, all requests with `setup. cgi` in the URL will be processed by the setup_main function
 
-![image-20240319134651718](D:\typora 图片\image-20240319134651718.png)
+![image-20240319134651718](https://github.com/funny-mud-peee/IoT-vuls/blob/main/netgear%20R6850/img/image-20240319134651718.png)
 
 It should be noted that a filter (`FindForbidValue`) was applied at the beginning of the function, filtering out some characters and specific functions
 
-![image-20240319134758233](D:\typora 图片\image-20240319134758233.png)
+![image-20240319134758233](https://github.com/funny-mud-peee/IoT-vuls/blob/main/netgear%20R6850/img/image-20240319134758233.png)
 
 Then go to the `CallActionByName` function, where you will find the characters in the `ActionTab` field
 
-![image-20240319134907840](D:\typora 图片\image-20240319134907840.png)
+![image-20240319134907840](https://github.com/funny-mud-peee/IoT-vuls/blob/main/netgear%20R6850/img/image-20240319134907840.png)
 
-![image-20240319135037610](D:\typora 图片\image-20240319135037610.png)
+![image-20240319135037610](https://github.com/funny-mud-peee/IoT-vuls/blob/main/netgear%20R6850/img/image-20240319135037610.png)
 
 In `ActionTab`, you can see the action function corresponding to ping_test(sub_184B0). Here, the `c4-IPAddr`parameter is concatenated into the `myPipe` function using the `snprintf` function (which is actually a self encapsulated `popen`)
 
-![image-20240319135340017](D:\typora 图片\image-20240319135340017.png)
+![image-20240319135340017](https://github.com/funny-mud-peee/IoT-vuls/blob/main/netgear%20R6850/img/image-20240319135340017.png)
